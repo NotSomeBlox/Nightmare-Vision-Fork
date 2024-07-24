@@ -76,7 +76,7 @@ class ChartingState extends MusicBeatState
 	[
 		'',
 		'Alt Animation',
-		'Hey!',
+		'The Funny V-tan',
 		'Hurt Note',
 		'GF Sing',
 		'No Animation',
@@ -483,7 +483,7 @@ class ChartingState extends MusicBeatState
 		add(prevRenderedSustains);
 		add(prevRenderedNotes);
 
-		clickForInfo = new FlxText(UI_box.x, UI_box.y + UI_box.height + 8, 0, 'Click for help!', 16);
+		clickForInfo = new FlxText(UI_box.x, UI_box.y + UI_box.height + 8, 0, 'Click on me for help! -Sonic of Schoolhouese Fame', 16);
 		clickForInfo.setFormat(Paths.font("vcr.ttf"), 14, 0xFF8c8c8c, LEFT/*, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK*/);
 		clickForInfo.scrollFactor.set(); 
 		textBox = new FlxSprite().makeGraphic(Std.int(clickForInfo.width * 1.25), Std.int(clickForInfo.height * 1.25), FlxColor.fromRGB(ClientPrefs.editorUIColor.red, ClientPrefs.editorUIColor.green, ClientPrefs.editorUIColor.blue));
@@ -546,7 +546,7 @@ class ChartingState extends MusicBeatState
 
 		var reloadSongJson:FlxButton = new FlxButton(reloadSong.x, saveButton.y + 30, "Reload JSON", function()
 		{
-			openSubState(new Prompt('This action will clear current progress.\n\nProceed?', 0, function(){loadJson(_song.song.toLowerCase()); }, null,ignoreWarnings));
+			openSubState(new Prompt('This action will clear progressal.\n\nProceed?', 0, function(){loadJson(_song.song.toLowerCase()); }, null,ignoreWarnings));
 		});
 
 		var loadAutosaveBtn:FlxButton = new FlxButton(reloadSongJson.x, reloadSongJson.y + 30, 'Load Autosave', function()
@@ -582,14 +582,14 @@ class ChartingState extends MusicBeatState
 
 		var clear_events:FlxButton = new FlxButton(360, 310, 'Clear events', function()
 			{
-				openSubState(new Prompt('This action will clear current progress.\n\nProceed?', 0, clearEvents, null,ignoreWarnings));
+				openSubState(new Prompt('This action will clear progressal.\n\nProceed?', 0, clearEvents, null,ignoreWarnings));
 			});
 		clear_events.color = FlxColor.RED;
 		clear_events.label.color = FlxColor.WHITE;
 
 		var clear_notes:FlxButton = new FlxButton(360, clear_events.y + 30, 'Clear notes', function()
 			{
-				openSubState(new Prompt('This action will clear current progress.\n\nProceed?', 0, function(){for (sec in 0..._song.notes.length) {
+				openSubState(new Prompt('This action will clear progressal.\n\nProceed?', 0, function(){for (sec in 0..._song.notes.length) {
 					_song.notes[sec].sectionNotes = [];
 				}
 				updateGrid();

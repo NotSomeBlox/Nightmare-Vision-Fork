@@ -48,7 +48,7 @@ class PauseSubState extends MusicBeatSubstate
 		{
 			var shit:Int = 2;
 			if (PlayState.chartingMode){
-				menuItemsOG.insert(shit, 'Leave Charting Mode');
+				menuItemsOG.insert(shit, 'Leave Debug Mode');
 				shit++;
 			}
 
@@ -60,7 +60,7 @@ class PauseSubState extends MusicBeatSubstate
 			}
 			menuItemsOG.insert(shit + num, 'End Song');
 			menuItemsOG.insert(shit + num, 'Toggle Practice Mode');
-			menuItemsOG.insert(shit + num, 'Toggle Botplay');
+			menuItemsOG.insert(shit + num, 'Toggle Autoplay');
 		}
 		menuItems = menuItemsOG;
 

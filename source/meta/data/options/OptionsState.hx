@@ -33,7 +33,7 @@ using StringTools;
 
 class OptionsState extends MusicBeatState
 {
-	var options:Array<String> = ['Notes', 'Controls', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay', "Loading"];
+	var options:Array<String> = ['Notes', 'Keybinds', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay', "Loading"];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
@@ -42,7 +42,7 @@ class OptionsState extends MusicBeatState
 		switch(label) {
 			case 'Notes':
 				openSubState(new meta.data.options.NoteSettingsSubState());
-			case 'Controls':
+			case 'Keybinds':
 				openSubState(new meta.data.options.ControlsSubState());
 			case 'Graphics':
 				openSubState(new meta.data.options.GraphicsSettingsSubState());
@@ -62,7 +62,7 @@ class OptionsState extends MusicBeatState
 
 	override function create() {
 		#if desktop
-		DiscordClient.changePresence("Options Menu", null);
+		DiscordClient.changePresence("Options", null);
 		#end
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));

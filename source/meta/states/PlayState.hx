@@ -117,7 +117,8 @@ class PlayState extends MusicBeatState
 {
 	public var modManager:ModManager;
 
-	public var ghostsAllowed:Bool = false;
+	// i accidentally left this off OOPSSSS
+	public var ghostsAllowed:Bool = true;
 
 	//var notefields:NotefieldManager = new NotefieldManager();
 	var speedChanges:Array<SpeedEvent> = [];
@@ -131,16 +132,16 @@ class PlayState extends MusicBeatState
 	public static var arrowSkin:String = '';
 	public static var arrowSkins:Array<String> = [];
 	public static var ratingStuff:Array<Dynamic> = [
-		['You Suck!', 0.2], //From 0% to 19%
+		['You are Fucking Atrocious.', 0.2], //From 0% to 19%
 		['Shit', 0.4], //From 20% to 39%
 		['Bad', 0.5], //From 40% to 49%
 		['Bruh', 0.6], //From 50% to 59%
 		['Meh', 0.69], //From 60% to 68%
-		['Nice', 0.7], //69%
+		['Varsexathor Joel', 0.7], //69%
 		['Good', 0.8], //From 70% to 79%
 		['Great', 0.9], //From 80% to 89%
 		['Sick!', 1], //From 90% to 99%
-		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['Grimcuttular!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
 	public var modchartSprites:Map<String, ModchartSprite> = new Map<String, ModchartSprite>();
@@ -641,11 +642,11 @@ class PlayState extends MusicBeatState
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
 		if (isStoryMode)
 		{
-			detailsText = "Jooouyouse :    )";
+			detailsText = "Specific Time Commencing";
 		}
 		else
 		{
-			detailsText = "Freeplay";
+			detailsText = "Freelpay";
 		}
 
 		// String for when the game is paused
@@ -1174,7 +1175,7 @@ class PlayState extends MusicBeatState
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
 			'songPercent', 0, 1);
 		timeBar.scrollFactor.set();
-		timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
+		timeBar.createFilledBar(0xFF000000, 0xFFFF0000);
 		timeBar.numDivisions = 800; //How much lag this causes?? Should i tone it down to idk, 400 or 200?
 		timeBar.alpha = 0;
 		timeBar.visible = showTime;
@@ -3716,7 +3717,7 @@ class PlayState extends MusicBeatState
 	public dynamic function updateScoreBar()
 	{
 		if(allowedToUpdateScoreTXT){
-			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
+			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Rating: ' + ratingName;
 			if(ratingName != '?')
 				scoreTxt.text += ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;
 		}
@@ -4703,10 +4704,7 @@ class PlayState extends MusicBeatState
 					}
 				}
 
-				// I dunno what you need this for but here you go
-				//									- Shubs
-
-				// Shubs, this is for the "Just the Two of Us" achievement lol
+				//this is for the "Just the Two of Us" achievement lol
 				//									- Shadow Mario
 
 				// LOOOOOL
@@ -5587,7 +5585,7 @@ class PlayState extends MusicBeatState
 
 			// Rating FC
 			ratingFC = "";
-			if (sicks > 0) ratingFC = "SFC";
+			if (sicks > 0) ratingFC = "KFC";
 			if (goods > 0) ratingFC = "GFC";
 			if (bads > 0 || shits > 0) ratingFC = "FC";
 			if (songMisses > 0 && songMisses < 10) ratingFC = "SDCB";
@@ -5694,3 +5692,4 @@ class PlayState extends MusicBeatState
 	var curLight:Int = -1;
 	var curLightEvent:Int = -1;
 }
+//jesus crhist this is long
