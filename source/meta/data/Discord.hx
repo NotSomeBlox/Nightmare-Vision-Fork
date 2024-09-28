@@ -131,9 +131,6 @@ class DiscordClient
 		"500k or dinner with jay z",
 		"1 million or a penny that doubles in size every day",
 		"shoot them with the dehydration gun"
-		"Thank you Ava for this cool engine"
-		"CLASSIC GAYLOOOOOOOOOOOOOOOOO!!!!!!!!!"
-		"skbidi syndrome sigma male"
 	];
 	
 	public static var isInitialized:Bool = false;
@@ -169,7 +166,7 @@ class DiscordClient
 			details: "uhmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
 			state: null,
 			largeImageKey: 'icon',
-			largeImageText: "Nightmares are real"
+			largeImageText: "Hit Single is real"
 		});
 	}
 
@@ -206,7 +203,7 @@ class DiscordClient
 			details: details,
 			state: state,
 			largeImageKey: 'icon',
-			largeImageText: "v. " + MainMenuState.psychEngineVersion,
+			largeImageText: "Engine Version: " + MainMenuState.psychEngineVersion,
 			smallImageKey : smallImageKey,
 			// Obtained times are in milliseconds so they are divided so Discord can use it
 			startTimestamp : Std.int(startTimestamp / 1000),

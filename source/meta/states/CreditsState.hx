@@ -43,7 +43,7 @@ class CreditsState extends MusicBeatState
 	{
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("Credice", null);
+		DiscordClient.changePresence("In the Menus", null);
 		#end
 
 		persistentUpdate = true;
@@ -83,13 +83,13 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
-			['NIGHTMARISH CIVILLIANS'],
-			['DuskieWhy', 'duskie', 'Main Developer and Coder', 'https://twitter.com/DuskieWhy', '6D32A8'],
+			['NIGHTMARISH FEDS'],
+			['DuskieWhy', 'duskie', 'Main Developer', 'https://twitter.com/DuskieWhy', '6D32A8'],
 			['Data', 'data', 'Programmer', 'https://twitter.com/FixedData', '0xFFFFAF64'],
 			['NebulaZorua', 'neb', 'HScript foundation writer', 'https://twitter.com/Nebula_Zorua', 'B300B3'],
 			['PHO', 'pho', 'Programmer', 'https://twitter.com/Phomow1', '0xFF7455be'],
 			['Decoy', 'decoy', 'Programmer, Charter', 'https://www.youtube.com/watch?v=PuYZ-9zcp4w', '0xFF5833B6'],
-			['LECTROA', 'joggingscout', 'Artist (SUPER KUTTY!!!!)', 'https://twitter.com/JoggingScout', '0xFF3366CC'],
+			['JoggingScout', 'joggingscout', 'Artist (SUPER KUTTY!!!!)', 'https://twitter.com/JoggingScout', '0xFF3366CC'],
 			['Iseta', 'iseta', 'Artist (a little less kutty...)', 'https://twitter.com/Isetaaaaa', '0xffdede0b'],
 			[''],
 			['Psych Engine Team'],
